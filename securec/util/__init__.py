@@ -56,7 +56,7 @@ def compile_and_flash(path, cryptooptions=None):
 
 def reset_target():
     scope = config.scope
-    target = cw.target(scope)
+    target = config.target
     scope.io.nrst = 'low'
     time.sleep(0.05)
     target.flush()
@@ -66,7 +66,7 @@ def reset_target():
 
 def capture():
     scope = config.scope
-    target = cw.target(scope)
+    target = config.target
     ret = scope.capture()
 
     for i in range(101):
