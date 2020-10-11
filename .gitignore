@@ -1,0 +1,11 @@
+*.lss
+*.map
+*.hex
+*.elf
+*.eep
+*.sym
+__pycache__
+objdir
+*.egg-info
+.ipynb_checkpoints
+.dep
