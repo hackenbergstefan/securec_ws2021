@@ -23,3 +23,6 @@ debug = False
 
 scope = None
 """ChipWhisperer scope."""
+
+target = None
+"""ChipWhisperer target."""
