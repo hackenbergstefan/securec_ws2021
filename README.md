@@ -27,8 +27,23 @@ pip install -e securec_ws2021
 
 5. That's it. Now you can use the lecture notebooks.
 
+#### Update
+
+1. Log in to Jupyter.
+2. Create a new Notebook in the root folder.
+3. Type in the first cell and execute:
+
+```jupyter
+! cd securec_ws2021 && git pull
+```
+
+
 ### 2. Install using ChipWhisperer source
 
 1. Clone this repository inside (or in parallel) to the chipwhisperer repository.
 2. Execute `pip install -e .` inside the clone of this repository.
 5. That's it. Now you can use the lecture notebooks.
+
+#### Update
+
+1. Goto the clone and execute `git pull`.
