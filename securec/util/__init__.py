@@ -8,6 +8,11 @@ import chipwhisperer as cw
 from .. import config
 
 
+def init(scope, target):
+    config.scope = scope
+    config.target = target
+
+
 def compile(path, cryptooptions=None):
     cryptooptions = cryptooptions or ['CRYPTO_TARGET=NONE']
     try:
