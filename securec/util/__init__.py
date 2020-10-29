@@ -8,9 +8,14 @@ import chipwhisperer as cw
 from .. import config
 
 
-def init(scope, target):
-    config.scope = scope
-    config.target = target
+def init():
+    if config.target is not None:
+        config.target.dis()
+    if config.scope is not None:
+        config.scope.dis()
+    config.scope = cw.scope()
+    config.target = cw.target(config.scope)
+    return config.scope, config.target
 
 
 def compile(path, cryptooptions=None):
