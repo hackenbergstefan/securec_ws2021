@@ -8,11 +8,17 @@ import chipwhisperer as cw
 from .. import config
 
 
-def init():
+def exit():
     if config.target is not None:
         config.target.dis()
+        config.target = None
     if config.scope is not None:
         config.scope.dis()
+        config.scope = None
+
+
+def init():
+    exit()
     config.scope = cw.scope()
     config.target = cw.target(config.scope)
     return config.scope, config.target
